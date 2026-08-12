@@ -1,0 +1,42 @@
+@import "./assets/fonts/font1";
+@import "tailwindcss";
+
+@theme {
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+  --font-sans: 'Inter', 'SF Pro Display', system-ui, sans-serif;
+  --font-display: 'Bitcount Ink', 'Playfair Display', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #050702;
+  color: #fff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050702;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(190, 242, 2, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(190, 242, 2, 0.5);
+}
+
+/* Selection */
+::selection {
+  background: #BEF202;
+  color: #000;
+}
