@@ -24,11 +24,12 @@ export default function ProjectsHorizontalScroll() {
         x: -totalScroll,
         ease: 'none',
         scrollTrigger: {
-          trigger: trigger,
+          trigger: sectionRef.current,
           pin: true,
           scrub: 1,
           end: () => `+=${totalScroll}`,
           invalidateOnRefresh: true,
+          start: "top top-=15%",
         },
       });
     }, sectionRef);

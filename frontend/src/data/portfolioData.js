@@ -55,62 +55,110 @@ export const skillsData = [
 
 export const projectsData = [
   {
-    id: "skillbridge",
-    title: "SkillBridge AI",
-    tagline: "Interview preparation and resume generation platform",
-    category: "Applied AI & Full Stack",
-    year: "2026",
-    description: "A job prep and JD specific resume generation",
-    longDescription: "Aura Studio combines Three.js GPU-accelerated rendering with custom WebSockets to stream high-density LLM responses into node graphs floating in 3D space. Includes real-time collaboration, custom shader nodes, and one-click cloud deployment.",
-    tags: ["React.js", "JWT", "mongoDB", "TailwindCSS", "Node.js"],
-    featured: true,
-    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-    stats: [
-      { label: "Rendering Speed", value: "60 FPS" },
-      { label: "Token Processing", value: "1.2k t/s" },
-      { label: "Active Nodes", value: "100k+" }
+    "id": "skillbridge",
+    "title": "SkillBridge AI",
+    "tagline": "AI-powered interview preparation and personalized performance analysis platform",
+    "category": "Applied AI & Full Stack",
+    "year": "2026",
+    "description": "An AI-powered interview preparation platform that conducts realistic mock interviews, analyzes responses, and generates personalized performance reports.",
+    "longDescription": "SkillBridge AI combines a React frontend with a Node.js and Express backend to deliver AI-powered mock interviews, response analysis, detailed performance analytics, and downloadable PDF reports. It uses MongoDB for persistent data storage and JWT-based authentication with a service-oriented backend architecture.",
+    "tags": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "AI"
     ],
-    liveUrl: "https://skill-bridge-ai-lilac.vercel.app/login",
-    githubUrl: "https://github.com/Nezaal/Skill-Bridge-AI"
+    "featured": true,
+    "image": "/project images/skillbridge.png",
+    "stats": [
+      {
+        "label": "Interview Analysis",
+        "value": "AI Powered"
+      },
+      {
+        "label": "Performance Reports",
+        "value": "PDF Export"
+      },
+      {
+        "label": "Authentication",
+        "value": "JWT Secure"
+      }
+    ],
+    "liveUrl": "https://skill-bridge-ai-lilac.vercel.app/login",
+    "githubUrl": "https://github.com/Nezaal/Skill-Bridge-AI"
   },
   {
-    id: "neural-flow-analytics",
-    title: "Synapse Engine",
-    tagline: "Sub-millisecond telemetry analytics platform with predictive AI alerts",
-    category: "Full-Stack System",
+    id: "k72-portfolio",
+    title: "K72 Website Clone",
+    tagline: "A motion-driven recreation of the K72 creative agency website",
+    category: "Frontend / Creative Development",
     year: "2025",
-    metrics: "<15ms Latency • 2.4 Billion Logs/Day",
-    description: "High-throughput real-time streaming engine built for monitoring distributed cloud microservices with instant anomaly detection.",
-    longDescription: "Synapse Engine processes gigabytes of telemetry data per second using Rust backend workers and presents interactive canvas timeline visualizations in a sleek dark-mode dashboard.",
-    tags: ["React 19", "Rust", "ClickHouse", "Tailwind CSS", "ECharts"],
+    metrics: "GSAP Animations • Interactive UI • Responsive Design",
+    description: "A frontend recreation of the K72 creative agency website, focused on expressive motion, smooth transitions, and a visually immersive browsing experience.",
+    longDescription: "Built with React and GSAP, this project recreates the visual language and interactions of K72.ca with custom animations, scroll-based motion, page transitions, and responsive layouts. The project combines React component architecture with GSAP-powered interactions to create a polished, animation-heavy agency-style experience.",
+    tags: [
+      "React 19",
+      "GSAP",
+      "Tailwind CSS",
+      "React Router",
+      "Vite"
+    ],
     featured: true,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    image: '/project images/k72.png',
     stats: [
-      { label: "Query Speed", value: "<15ms" },
-      { label: "Throughput", value: "2.4B events" },
-      { label: "Uptime", value: "99.999%" }
+      {
+        label: "Frontend",
+        value: "React 19"
+      },
+      {
+        label: "Animation",
+        value: "GSAP"
+      },
+      {
+        label: "Styling",
+        value: "Tailwind CSS"
+      }
     ],
     liveUrl: "#",
-    githubUrl: "#"
+    githubUrl: "https://github.com/Nezaal/K72-portfolio"
   },
   {
-    id: "quantum-os-interface",
-    title: "Vapor OS Dashboard",
-    tagline: "Futuristic browser-based workspace with glassmorphism UI components",
-    category: "Creative Dev & UI Systems",
-    year: "2025",
-    metrics: "12k Stars on GitHub",
-    description: "An ultra-premium, Apple-inspired Web desktop experience featuring physics-based windows, dynamic audio feedback, and custom design tokens.",
-    longDescription: "Built to demonstrate the outer boundaries of browser UI capabilities. Includes custom window management, hardware-accelerated blur filters, keyboard shortcuts, and sound synthesis.",
-    tags: ["React", "GSAP", "Tailwind CSS", "Web Audio API"],
-    featured: true,
-    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
-    stats: [
-      { label: "Lighthouse Score", value: "100/100" },
-      { label: "GitHub Stars", value: "12,400+" },
-      { label: "Bundle Size", value: "42 KB" }
+    "id": "resume-screener",
+    "title": "AI Resume Screener",
+    "tagline": "AI-powered candidate screening and ranking platform",
+    "category": "Full-Stack AI Application",
+    "year": "2026",
+    "metrics": "AI Scoring • Semantic Matching • Automated Ranking",
+    "description": "A full-stack web application that automatically analyzes resumes against job descriptions, generates candidate match scores, and ranks applicants by suitability.",
+    "longDescription": "Built with React, Node.js, and Express, the platform supports PDF and DOCX resume uploads, automatic text and skill extraction, semantic similarity analysis using local sentence-transformer embeddings, and weighted candidate scoring. Results are stored in Supabase and presented through an interactive dashboard with search, sorting, and CSV export functionality.",
+    "tags": [
+      "React",
+      "Node.js",
+      "Express.js",
+      "Supabase",
+      "Tailwind CSS",
+      "Transformers.js",
+      "Vite"
     ],
-    liveUrl: "#",
-    githubUrl: "#"
+    "featured": true,
+    "image": '/project images/resumeScreener.png',
+    "stats": [
+      {
+        "label": "Skill Match",
+        "value": "60%"
+      },
+      {
+        "label": "Semantic Match",
+        "value": "30%"
+      },
+      {
+        "label": "Education Match",
+        "value": "10%"
+      }
+    ],
+    liveUrl: "https://resume-screener-chi-gilt.vercel.app",
+    "githubUrl": "https://github.com/Nezaal/resume-Screener"
   }
 ]
