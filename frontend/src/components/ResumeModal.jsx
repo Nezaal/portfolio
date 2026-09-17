@@ -16,7 +16,7 @@ export default function ResumeModal({ onClose }) {
         <h3 className="text-xl font-bold font-mono">{personalInfo.name} — Resume</h3>
 
         <iframe
-          src="/nezaal_resume.pdf"
+          src="/project%20images/Nezaal-Ahmad-resume.pdf"
           title="Resume preview"
           className="w-full h-[70vh] rounded-xl bg-white/5 border border-white/10"
         />
@@ -29,7 +29,7 @@ export default function ResumeModal({ onClose }) {
             Close
           </button>
           <a
-            href="/nezaal_resume.pdf"
+            href="/Nezaal-Ahmad-resume.pdf"
             download="Nezaal_Ahmad_Resume.pdf"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#BEF202] text-black text-xs font-mono font-bold hover:bg-[#a8d602] transition-colors"
           >

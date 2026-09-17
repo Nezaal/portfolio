@@ -17,20 +17,26 @@ export default function ProjectsHorizontalScroll() {
     const trigger = triggerRef.current;
     if (!panels || !trigger) return;
 
-    const totalScroll = panels.scrollWidth - window.innerWidth;
-
     const ctx = gsap.context(() => {
-      gsap.to(panels, {
-        x: -totalScroll,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          pin: true,
-          scrub: 1,
-          end: () => `+=${totalScroll}`,
-          invalidateOnRefresh: true,
-          start: "top top-=15%",
-        },
+      const media = gsap.matchMedia();
+
+      // Keep the horizontal interaction for desktop only. Smaller screens
+      // render the cards in a normal vertical flow instead of overflowing.
+      media.add('(min-width: 1024px)', () => {
+        const totalScroll = Math.max(0, panels.scrollWidth - window.innerWidth);
+
+        gsap.to(panels, {
+          x: -totalScroll,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            pin: true,
+            scrub: 1,
+            end: () => `+=${totalScroll}`,
+            invalidateOnRefresh: true,
+            start: 'top top-=15%',
+          },
+        });
       });
     }, sectionRef);
 
@@ -55,17 +61,13 @@ export default function ProjectsHorizontalScroll() {
 
       {/* Horizontal Scroll Trigger Area */}
       <div ref={triggerRef} className="overflow-hidden">
-        <div
-          ref={panelsRef}
-          className="flex gap-8 px-[5vw] will-change-transform"
-          style={{ width: 'max-content' }}
-        >
+        <div ref={panelsRef} className="flex flex-col lg:flex-row gap-8 px-4 md:px-12 lg:px-[5vw] w-full lg:w-max will-change-transform">
           {projectsData.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
           ))}
 
           {/* End spacer card */}
-          <div className="flex-shrink-0 w-[60vw] md:w-[40vw] flex items-center justify-center">
+          <div className="hidden lg:flex flex-shrink-0 w-[40vw] items-center justify-center">
             <div className="text-center space-y-4">
               <p className="font-mono text-2xl md:text-4xl font-bold text-white/20">More coming soon...</p>
               <p className="font-mono text-xs text-white/30">Always building, always shipping.</p>
@@ -80,7 +82,7 @@ export default function ProjectsHorizontalScroll() {
 function ProjectCard({ project, index }) {
   return (
     <div
-      className="flex-shrink-0 w-[85vw] md:w-[60vw] lg:w-[45vw] h-[75vh] relative rounded-2xl overflow-hidden border border-white/10 group"
+      className="flex-shrink-0 w-full lg:w-[45vw] h-[65vh] md:h-[70vh] lg:h-[75vh] relative rounded-2xl overflow-hidden border border-white/10 group"
       style={{ perspective: '1200px' }}
     >
       {/* Background Image */}

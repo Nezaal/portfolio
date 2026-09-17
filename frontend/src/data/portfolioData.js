@@ -71,7 +71,7 @@ export const projectsData = [
       "AI"
     ],
     "featured": true,
-    "image": "/project images/skillbridge.png",
+    "image": "/skillbridge.png",
     "stats": [
       {
         "label": "Interview Analysis",
@@ -121,7 +121,7 @@ export const projectsData = [
         value: "Tailwind CSS"
       }
     ],
-    liveUrl: "#",
+    liveUrl: "https://k72-portfolio.vercel.app/",
     githubUrl: "https://github.com/Nezaal/K72-portfolio"
   },
   {
@@ -159,6 +159,6 @@ export const projectsData = [
       }
     ],
     liveUrl: "https://resume-screener-chi-gilt.vercel.app",
-    "githubUrl": "https://github.com/Nezaal/resume-Screener"
+    githubUrl: "https://github.com/Nezaal/resume-Screener"
   }
 ]
